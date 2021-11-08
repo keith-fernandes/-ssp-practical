@@ -102,25 +102,25 @@
 						</tr>
 					</thead>
 					<tbody>
-						<xsl:for-each select="Answer">
+						<xsl:for-each select="//option">
 							<tr>
 								<td colspan="3">
-									<xsl:value-of select="Answer"/>
+									<xsl:value-of select="@name"/>
 								</td>
 							</tr>
-							<xsl:for-each select="Answer">
+							<xsl:for-each select="food">
 								<tr>
 									<xsl:attribute name="vegetarian">
-										<xsl:value-of select="Answer"/>
+										<xsl:value-of select="boolean(@vegetarian)"/>
 									</xsl:attribute>
 									<td align="center">
 										<input name="item0" type="checkbox"/>
 									</td>
 									<td>
-										<xsl:value-of select="Answer"/>
+										<xsl:value-of select="item"/>
 									</td>
 									<td align="right">
-										<xsl:value-of select="Answer"/>
+										<xsl:value-of select="price"/>
 									</td>
 								</tr>
 							</xsl:for-each>
