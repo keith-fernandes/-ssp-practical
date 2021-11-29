@@ -102,13 +102,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						<xsl:for-each select="//option">
+						<xsl:for-each select="//section">
 							<tr>
 								<td colspan="3">
 									<xsl:value-of select="@name"/>
 								</td>
 							</tr>
-							<xsl:for-each select="food">
+							<xsl:for-each select="entry">
 								<tr>
 									<xsl:attribute name="vegetarian">
 										<xsl:value-of select="boolean(@vegetarian)"/>
